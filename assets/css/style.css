@@ -1,28 +1,23 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-
-
-
-
-/* asterisk wildcard selector to overide default styles added by the browers */
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General styles*/
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* General project styles */
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
-/* h1 styling */
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -30,8 +25,7 @@ h1, h2, h3 {
     color: #252525;
 }
 
-
-/* header */
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -42,20 +36,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    
 }
-/* Styling links in header */
+
 header a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Styling for nav section */
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
-
 }
 
 #menu > li {
@@ -78,29 +69,27 @@ nav {
     top: 100%;
 }
 
-/* Nav Toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
     display: none;
 }
 
-#nav-toggle-label {
+.nav-toggle-label {
     font-size: 2rem;
 }
 
-
-/* Main Content*/
+/* Main content */
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
-
-/* Hero Section */
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
@@ -115,13 +104,57 @@ main {
     position: absolute;
     bottom: 30px;
     width: 80%;
-    height: 200px;
+    min-height: 200px;
     padding-top: 40px;
     padding-left: 10px;
 }
 
 #cover-text > h2, #cover-text > h3 {
     color: #ffffff;
+}
+
+/* Reasons section */
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-bg {
+    background: url("../images/reasons-image.webp") no-repeat top center / cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Footer */
@@ -138,7 +171,6 @@ main {
     padding: 5%;
     color: #3a3a3a;
 }
-
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -171,7 +203,7 @@ main {
 
     /* Main content */
     main {
-        /*Push main content down to accommodate larger header */
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
@@ -180,10 +212,9 @@ main {
         width: 300px;
         right: 50px;
     }
-
 }
 
-/* Media query: tablets and larger (992px and up) */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
